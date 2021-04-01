@@ -20,3 +20,8 @@ ref5(x)=-0.08877667311982003*x^3+0.29461590134457105*x^2+-0.47051978617321616*x^
 With higher CRIT Rate values (>85%) these functions lose accuracy (at this point the data doesn't seem to describe the same polynomial pattern), and about the >97% CRIT Rate the result can be a negative number, just assume this means 0% contribution. This can be seen in the following image:
 ![error](./results/error.png)
 To correct this I would have to use a higher degree polynomial regression or split the data in two parts and describe it with different functions, but won't do it by now, I think is accurate enough for further calculations (although for the first solution is just needed to modify the regression degree in the file [regression.py](./regression.py)).
+
+## Instructions
+- To make the simulation again (which may be a slow process), run the script [royalwp.py](./royalwp.py).
+- The script [graph.py](./graph.py) generates the polynomial regressions and the plots based on an specific file with the simulation results. You **DON'T** need to make the simulation again if you want to modify the [graph.py](./graph.py) or [regression.py](./regression.py) files.
+- Both simulation and regression results are stored in the [./results](./results) folder.
