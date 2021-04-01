@@ -4,6 +4,7 @@ window.addEventListener("load", function() {
     const outRank = document.getElementById("rank");
     const inCrit = document.getElementById("basecrit");
     const outContrib = document.getElementById("contrib");
+    const outFinal = document.getElementById("final");
 
     listen(inRef);
     listen(inCrit);
@@ -17,7 +18,10 @@ window.addEventListener("load", function() {
     }
     function update(){
         outRank.innerText = (8 + 2*(val(inRef)-1)).toString();
-        outContrib.value = truncate(calculate(val(inRef), val(inCrit)/100)*100, 4);
+
+        var contrib = calculate(val(inRef), val(inCrit)/100)*100;
+        outContrib.value = truncate(contrib, 4);
+        outFinal.value = truncate(val(inCrit)+contrib, 4);
     }
 
 
@@ -32,6 +36,6 @@ window.addEventListener("load", function() {
     }
 
     function truncate(x, n) {
-        return (Math.floor(x*Math.pow(10, n))/Math.pow(10, n)).toString();
+        return (Math.round(x*Math.pow(10, n))/Math.pow(10, n)).toString();
     }
 });
