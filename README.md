@@ -6,7 +6,7 @@ The results of the simulation are seen in this graph:
 
  Then, the data where described using polynomial functions (results are saved in [This File](./polyfunctions.txt)).
 Where `x` is the character Base CRIT Rate (from 0 to 1):
-```py
+```
 ref1(x)=-0.10158034117292747*x^3+0.31101509708848735*x^2+-0.4000198511105707*x^1+0.18932855038352558
 ref2(x)=-0.10114100798963055*x^3+0.31549951098707774*x^2+-0.42777398106120645*x^1+0.21160958631034335
 ref3(x)=-0.0973317320403049*x^3+0.3109264569837878*x^2+-0.4462218801782434*x^1+0.23015547899566594
