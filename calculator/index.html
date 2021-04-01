@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>[GI] Royal Weapons Effective CRIT Rate Contribution</title>
+</head>
+<body>
+    <table id="main">
+        <tr>
+            <th colspan="2">[GI] Royal Weapon</th>
+        </tr>
+        <tr>
+            <td id="refrank">
+                Refinement Rank:
+                <select id="ref">
+                    <option selected value="1">Rank 1</option>
+                    <option value="2">Rank 2</option>
+                    <option value="3">Rank 3</option>
+                    <option value="4">Rank 4</option>
+                    <option value="5">Rank 5</option>
+                </select>
+            </td>
+            <td>
+                <table>
+                <tr><td>Character Base CRIT Rate:</td></tr>
+                <tr><td>
+                    <div class="ph" data-ph="%">
+                        <input type="number" id="basecrit" value="50">
+                    </div>
+                </td></tr>
+                </table>   
+            </td>
+        </tr>
+        <tr>
+            <td width="220">
+                Upon dealing damage to an opponent, 
+                increases CRIT Rate by <span id="rank">0</span>%. 
+                Max 5 stacks. A CRIT hit removes all existing stacks.
+            </td>
+            <td>
+                <table>
+                <tr><td>Average CRIT Rate contribution:</td></tr>
+                <tr><td>
+                    <div class="ph" data-ph="%">
+                        <input readonly type="number" id="contrib" value="50">
+                    </div>
+                </td></tr>
+                </table>   
+            </td>
+        </tr>
+    </table>
+
+    <script src="program.js"></script>
+</body>
+</html>
