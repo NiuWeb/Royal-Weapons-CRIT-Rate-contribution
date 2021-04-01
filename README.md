@@ -13,3 +13,6 @@ ref3(x)=-0.0973317320403049*x^3+0.3109264569837878*x^2+-0.4462218801782434*x^1+0
 ref4(x)=-0.09305456817824306*x^3+0.30332830972277874*x^2+-0.45976802242978737*x^1+0.24621017771906156
 ref5(x)=-0.08877667311982003*x^3+0.29461590134457105*x^2+-0.47051978617321616*x^1+0.26049964486333793
 ```
+
+With higher CRIT Rate values (>85%) these functions lose accuracy (at this point the data doesn't seem to describe the same polynomial pattern), and about the >98% CRIT Rate the result can be a negative number, just assume this means 0% contribution. This can be seen in the following image:
+![error](./error.png)
