@@ -4,10 +4,9 @@ from math import floor
 from regression import *
 
 # Data file
-data = open('results/royalwp-results-183226.csv', 'r').readlines()
-
+data = np.loadtxt('results/royalwp-results-183226.csv', delimiter=',')
 # Base CRIT Rate data
-initCrit = np.array([float(i) for i in data[0].split(',')])
+initCrit = data[0]
 
 # List of function strings
 funcs = []
@@ -18,7 +17,7 @@ plt.figure(figsize=(12,8))
 
 for ref in range(1, 6):
     # CRIT Rate contribution data
-    incrCrit = np.array([float(i) for i in data[ref].split(',')])
+    incrCrit = data[ref]
 
     # Generate polynomial regression
     z = Regression(initCrit, incrCrit)
