@@ -32,7 +32,7 @@ for ref in range(1, 6):
     plt.plot(initCrit, z.eval(initCrit), color=colors[ref-1],label=label2,ls='--',alpha=0.5)
 
 # Save function strings
-np.savetxt("polyfunctions.txt",funcs, fmt="%s")
+np.savetxt("results/polyfunctions.txt",funcs, fmt="%s")
 
 # Graph configuration
 plt.xticks(np.arange(0, 1.05, 0.05))
@@ -44,5 +44,6 @@ plt.ylabel("CRIT Rate contribution")
 
 plt.legend()
 # Save graph
-plt.savefig("graph.png")
+plt.savefig("results/graph.png")
+plt.savefig("results/graph.svg")
 plt.show()
