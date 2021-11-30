@@ -14,7 +14,7 @@ print(fname)
 
 # Data storing
 incrCrit = []
-baseCrit = np.arange(0.05, 1, 0.001)
+baseCrit = np.arange(-1, 1, 0.05)
 sample = len(baseCrit)
 data = [baseCrit]
 
@@ -32,10 +32,7 @@ for ref in range(1, 6):
         crits = simulateHits(hits, ref, rate)
         # real CRIT Rate (CRIT hits scored / total hits scored)
         nrate = crits/hits
-        # CRIT Rate increment (real - initial)
-        incr = nrate - rate
-
-        incrCrit.append(incr)
+        incrCrit.append(nrate)
 
         # Control!
         if n >= sample/10:
