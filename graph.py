@@ -4,7 +4,7 @@ from math import floor
 from regression import *
 
 # Data file
-data = np.loadtxt('results/royalwp-results-201033.csv', delimiter=',')
+data = np.loadtxt('results/royalwp-results-202302.csv', delimiter=',')
 # Base CRIT Rate data
 initCrit = data[0]
 

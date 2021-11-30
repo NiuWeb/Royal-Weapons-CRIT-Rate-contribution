@@ -14,7 +14,7 @@ print(fname)
 
 # Data storing
 incrCrit = []
-baseCrit = np.arange(-1, 1, 0.05)
+baseCrit = np.arange(-1, 1, 0.01)
 sample = len(baseCrit)
 data = [baseCrit]
 
