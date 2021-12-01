@@ -47,7 +47,7 @@ plt.xticks(np.arange(-1, 1.05, 0.1))
 plt.yticks(np.arange(0, 1, 0.05))
 
 plt.title("[GI] Royal Weapons CRIT Rate contribution")
-plt.xlabel("Effective initial CRIT Rate")
+plt.xlabel("initial CRIT Rate")
 plt.ylabel("Effective CRIT Rate with Royal weapon")
 
 plt.legend()
