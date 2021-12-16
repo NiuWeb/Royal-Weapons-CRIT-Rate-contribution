@@ -1,4 +1,5 @@
 function royalCrit(rank, critrate) {
+    if(critrate<0||critrate>1)return 0;
     const coefficients = [
         [[-128.4499, -138.4761, -59.75334, -11.00387, -0.4655975, 0.4539864, 0.189614], 
         [-0.10036, 0.30971, -0.39967, 0.18932], 
@@ -19,5 +20,5 @@ function royalCrit(rank, critrate) {
     const x = critrate;
     const u = 0.08+0.02*(rank-1);
     const poly = coefficients[rank-1][x<0?0:(x<1-u?1:2)];
-    return poly.map((p, i)=>x<-5*u?0:p*x**(poly.length-i-1)).reduce((a,b)=>a+b,0);
+    return Math.max(0,poly.map((p, i)=>x<-5*u?0:p*x**(poly.length-i-1)).reduce((a,b)=>a+b,0));
 }

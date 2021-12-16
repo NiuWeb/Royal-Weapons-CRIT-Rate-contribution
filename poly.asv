@@ -5,7 +5,6 @@ range = -1:0.001:1;
 figure;
 xline(0, ':k');
 hold;
-diary poly/coefficients.txt;
 text = "";
 %% POLYFIT FOR INCREASE DATA
 for rank = 1:5
@@ -37,11 +36,13 @@ for rank = 1:5
    text = text + "[";
    text = text + "[" + num2str(reshape(p1, 1, [])) + "], ";
    text = text + "[" + num2str(reshape(p2, 1, [])) + "], ";
-   text = text + "[" + num2str(reshape(p2, 1, [])) + "]";
+   text = text + "[" + num2str(reshape(p3, 1, [])) + "]";
    text = text + "],";
 end
-disp
-diary off;
+diary ;
+fileID = fopen("poly/coefficients.txt","w");
+fprintf(fileID,'%6.2f %12.8f\n',A);
+fclose(fileID);
 
 set(gcf, "PaperUnits", "inches");
 set(gcf, "PaperPosition", [0 0 16 9]);

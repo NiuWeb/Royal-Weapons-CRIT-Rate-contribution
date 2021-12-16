@@ -39,9 +39,10 @@ for rank = 1:5
    text = text + "[" + num2str(reshape(p3, 1, [])) + "]";
    text = text + "],";
 end
-diary poly/coefficients.txt;
-disp(text);
-diary off;
+diary ;
+f = fopen("poly/coefficients.txt","w");
+fprintf(f, text);
+fclose(f);
 
 set(gcf, "PaperUnits", "inches");
 set(gcf, "PaperPosition", [0 0 16 9]);
