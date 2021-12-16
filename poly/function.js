@@ -1,5 +1,5 @@
 function royalCrit(rank, critrate) {
-    if(critrate<0||critrate>1)return 0;
+    if(critrate<-1||critrate>1)return 0;
     const coefficients = [
         [[-128.4499, -138.4761, -59.75334, -11.00387, -0.4655975, 0.4539864, 0.189614], 
         [-0.10036, 0.30971, -0.39967, 0.18932], 
